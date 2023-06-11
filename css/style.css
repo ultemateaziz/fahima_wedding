@@ -378,14 +378,20 @@ img {
 	left: 0;
 	display: block;
 }
-
+.title:hover {
+	color: red;
+}
+  
+.title{
+	transition: color 0.3s ease-in-out;
+}
 .title h1 {
 	font-family: 'Playfair Display', serif;
 	font-weight: bold;
 	font-style: normal;
 	font-size: 60px;
 	margin: 32px 0;
-	color: #674ea7;
+	color: #242323;
 }
 
 .title h2 {
