@@ -361,7 +361,7 @@ img {
 
 @media (max-width:900px) {
 	img {
-		max-width: 30%;
+		max-width: 100%;
 	}
 }
 
