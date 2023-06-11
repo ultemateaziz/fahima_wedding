@@ -378,9 +378,6 @@ img {
 	left: 0;
 	display: block;
 }
-.title:hover {
-	color: red;
-}
   
 .title{
 	transition: color 0.3s ease-in-out;
@@ -388,22 +385,20 @@ img {
 .title h1 {
 	font-family: 'Playfair Display', serif;
 	font-weight: bold;
-	font-style: normal;
 	font-size: 60px;
 	margin: 32px 0;
 	color: #242323;
-}
+  }
 
-.title h2 {
+  .title h2 {
 	font-family: 'Dancing Script', cursive;
 	font-weight: bold;
-	font-style: normal;
+	font-size: 24px;
 	margin: 0;
 	padding: 0;
-	font-size: 24px;
 	color: #e25c67;
 	line-height: 1;
-}
+  }
 
 .dance-med {
 	font-family: 'Dancing Script', cursive;
@@ -430,21 +425,16 @@ img {
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-size: 16px;
-}
+  }
 
 .wrap {
-	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
-	-webkit-justify-content: center;
 	justify-content: center;
-	-webkit-align-items: center;
 	align-items: center;
-	/* padding: 20px; */
 	text-align: center;
-	/* min-height:100%; */
-}
+	margin-bottom: 40px;
+  }
 
 
 /** **/
@@ -465,8 +455,71 @@ body {
 }
 
 .title {
-	margin-bottom: 40px;
-}
+	transition: color 0.3s ease-in-out;
+  }
+.title:hover {
+	color: #e25c67;
+  }
+.title .location {
+	font-size: 14px;
+	color: #999;
+	margin-top: 10px;
+}  
+.title .date {
+	font-size: 20px;
+	color: #e25c67;
+	margin-top: 20px;
+  }
+  
+  .title .venue {
+	font-size: 14px;
+	color: #999;
+	margin-top: 10px;
+  }
+  
+  .title .venue span {
+	font-weight: bold;
+	color: #564861;
+  }
+  
+  /* Additional Styles */
+  .dance-med {
+	font-family: 'Dancing Script', cursive;
+	font-weight: bolder;
+	font-size: 32px;
+	color: #674ea7;
+	margin: 16px;
+	text-align: center;
+  }
+  @keyframes nameAnimation {
+	0% {
+	  transform: translateY(-50%);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+  
+  .title h1 {
+	animation: nameAnimation 1s ease-in-out;
+  }
+  @keyframes imageEntry {
+	0% {
+	  transform: translateY(-100%);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+  
+  .top-down-decoration {
+	animation: imageEntry 1s ease-in-out;
+  }
+  
 
 #time {
 	width: auto;
@@ -583,7 +636,55 @@ a {
 	display: flex;
 	font-size: 12px;
 	letter-spacing: 0pt;
-}
+  }
+  
+  .actions a {
+	text-decoration: none;
+  }
+  
+  .actions a:hover {
+	opacity: 0.7;
+  }
+  
+  .actions .venue {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	background-color: #f0f0f0;
+	color: #000;
+	border-radius: 5px;
+	margin-right: 10px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .actions .venue i {
+	margin-right: 5px;
+  }
+  
+  .actions .venue:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	background-color: #000;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+  }
+  
+  .actions .venue:hover:before {
+	opacity: 0.2;
+  }
+  
+  .actions .venue:hover {
+	transform: scale(1.1);
+  }
+  
+
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
